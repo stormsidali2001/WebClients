@@ -43,7 +43,8 @@
     "lint-staged": "^13.2.2",
     "prettier": "^2.8.8",
     "sort-package-json": "^2.4.1",
-    "@componly/cli": "^1.18.0"
+    "@componly/cli": "^1.18.0",
+    "axios": "^1.4.0"
   },
   "packageManager": "yarn@3.6.0",
   "engines": {
