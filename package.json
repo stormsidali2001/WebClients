@@ -1,50 +1,51 @@
 {
-    "name": "root",
-    "private": true,
-    "license": "GPL-3.0",
-    "workspaces": [
-        "applications/*",
-        "packages/*",
-        "tests",
-        "utilities/*"
-    ],
-    "scripts": {
-        "app-versions": "bash utilities/app-versions/app-versions.sh",
-        "config-app": "(packages/config/install 2>/dev/null) || true",
-        "create-atom": "yarn workspace @proton/atoms create-atom",
-        "postinstall": "is-ci || (husky install; yarn run config-app)",
-        "start-all": "cd utilities/local-sso && bash ./run.sh",
-        "version": "yarn workspace version run version"
-    },
-    "resolutions": {
-        "@noble/ed25519@1.7.3": "patch:@noble/ed25519@npm%3A1.7.3#./.yarn/patches/@noble-ed25519-npm-1.7.3-033c70acb7.patch",
-        "@pdf-lib/standard-fonts@^1.0.0": "patch:@pdf-lib/standard-fonts@npm%3A1.0.0#./.yarn/patches/@pdf-lib-standard-fonts-npm-1.0.0-963255903e.patch",
-        "@storybook/react-docgen-typescript-plugin": "1.0.6--canary.9.f9c48c0.0",
-        "@types/jest": "^29.5.2",
-        "@types/react": "^17.0.62",
-        "@types/react-dom": "^17.0.20",
-        "memfs": "^3.5.3",
-        "nwsapi": "2.2.2",
-        "rfc2047@^2.0.1": "patch:rfc2047@npm%3A2.0.1#./.yarn/patches/rfc2047-npm-2.0.1-60a2a07c99.patch",
-        "safe-buffer": "^5.2.1"
-    },
-    "dependencies": {
-        "@proton/eslint-config-proton": "workspace:packages/eslint-config-proton",
-        "@proton/stylelint-config-proton": "workspace:packages/stylelint-config-proton",
-        "is-ci": "^3.0.1",
-        "stylelint-use-logical-spec": "^5.0.0",
-        "typescript": "^5.1.3"
-    },
-    "devDependencies": {
-        "@trivago/prettier-plugin-sort-imports": "^4.1.1",
-        "eslint-plugin-jsx-a11y": "^6.7.1",
-        "husky": "^8.0.3",
-        "lint-staged": "^13.2.2",
-        "prettier": "^2.8.8",
-        "sort-package-json": "^2.4.1"
-    },
-    "packageManager": "yarn@3.6.0",
-    "engines": {
-        "node": ">= v18.16.0"
-    }
+  "name": "root",
+  "private": true,
+  "license": "GPL-3.0",
+  "workspaces": [
+    "applications/*",
+    "packages/*",
+    "tests",
+    "utilities/*"
+  ],
+  "scripts": {
+    "app-versions": "bash utilities/app-versions/app-versions.sh",
+    "config-app": "(packages/config/install 2>/dev/null) || true",
+    "create-atom": "yarn workspace @proton/atoms create-atom",
+    "postinstall": "is-ci || (husky install; yarn run config-app)",
+    "start-all": "cd utilities/local-sso && bash ./run.sh",
+    "version": "yarn workspace version run version",
+    "scan": "componly scan"
+  },
+  "resolutions": {
+    "@noble/ed25519@1.7.3": "patch:@noble/ed25519@npm%3A1.7.3#./.yarn/patches/@noble-ed25519-npm-1.7.3-033c70acb7.patch",
+    "@pdf-lib/standard-fonts@^1.0.0": "patch:@pdf-lib/standard-fonts@npm%3A1.0.0#./.yarn/patches/@pdf-lib-standard-fonts-npm-1.0.0-963255903e.patch",
+    "@storybook/react-docgen-typescript-plugin": "1.0.6--canary.9.f9c48c0.0",
+    "@types/jest": "^29.5.2",
+    "@types/react": "^17.0.62",
+    "@types/react-dom": "^17.0.20",
+    "memfs": "^3.5.3",
+    "nwsapi": "2.2.2",
+    "rfc2047@^2.0.1": "patch:rfc2047@npm%3A2.0.1#./.yarn/patches/rfc2047-npm-2.0.1-60a2a07c99.patch",
+    "safe-buffer": "^5.2.1"
+  },
+  "dependencies": {
+    "@proton/eslint-config-proton": "workspace:packages/eslint-config-proton",
+    "@proton/stylelint-config-proton": "workspace:packages/stylelint-config-proton",
+    "is-ci": "^3.0.1",
+    "stylelint-use-logical-spec": "^5.0.0",
+    "typescript": "^5.1.3"
+  },
+  "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^4.1.1",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.2",
+    "prettier": "^2.8.8",
+    "sort-package-json": "^2.4.1"
+  },
+  "packageManager": "yarn@3.6.0",
+  "engines": {
+    "node": ">= v18.16.0"
+  }
 }
